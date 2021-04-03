@@ -122,10 +122,7 @@ img {
 
 .loader__spinner {
   display: block;
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  box-shadow: 0 4px 0 0 var(--second-color);
+  width: 10rem;
   animation: loadingAnim 1s linear infinite;
 }
 
@@ -845,16 +842,15 @@ img {
 }
 
 /* PRELOADER ANIMATION */
+
 @keyframes loadingAnim {
-  0% {
-    transform: rotate(0deg);
+  from {
+    transform: scale(1);
   }
-
   50% {
-    transform: rotate(180deg);
+    transform: scale(0.85);
   }
-
-  100% {
-    transform: rotate(360deg);
+  to {
+    transform: scale(1);
   }
 }
